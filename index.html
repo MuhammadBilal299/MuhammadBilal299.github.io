@@ -51,8 +51,8 @@
     <!-- Jumbotron -->
     <section class="jumbotron text-center" >
       <img src="img/bilal.jpg" alt="Muhammad Bilal" width="200" class="rounded-circle img-thumbnail" />
-      <h1 class="display-4">Muhammad Bilal</h1>
-      <p class="lead">Mahasiswa | Santri</p>
+      <h1 class="display-4 lead" data-aos="zoom-in" data-aos-duration="1000">Muhammad Bilal</h1>
+      <p class="lead1"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffff"
@@ -98,7 +98,7 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-duration="500">
+          <div class="col-md-4 mb-3"data-aos="zoom-in" data-aos-duration="500">
             <div class="card">
               <img src="img/bilal1.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
@@ -143,7 +143,7 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-6"data-aos="fade-up"data-aos-anchor-placement="bottom-bottom">
+          <div class="col-md-6"data-aos="fade-down"data-aos-anchor-placement="bottom-bottom">
             <form>
               <div class="mb-3">
                 <label for="name" class="form-label">Name Lengkap</label>
@@ -178,5 +178,14 @@
       AOS.init();
     </script>
     <!-- aos -->
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.lead1', {duration: 2.5, delay:1.8, text:'Mahasiswa | Santri'})
+      gsap.from('.jumbotron img',{duration:1, y:-100, opacity:0,ease:'bounce'})
+    </script>
+    <!-- gsap -->
   </body>
 </html>
